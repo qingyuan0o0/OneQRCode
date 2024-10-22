@@ -1,6 +1,6 @@
 # OneQRCode
 
-微信、支付宝、QQ 三合一收款二维码，单文件版
+微信、支付宝合一收款二维码，单文件版
 
 ![](https://img.shields.io/github/issues/mengkunsoft/OneQRCode.svg?style=flat-square) ![](https://img.shields.io/github/forks/mengkunsoft/OneQRCode.svg?style=flat-square) ![](https://img.shields.io/github/stars/mengkunsoft/OneQRCode.svg?style=flat-square) ![](https://img.shields.io/github/license/mengkunsoft/OneQRCode.svg?style=flat-square)
 
@@ -8,6 +8,7 @@
  
  - 纯前端实现，无需安装，无需数据库；
  - 免维护，无任何多余的配置，只需修改收款链接，即可永久使用。
+ - 因为使用经营码,所以避免微信个人支付的二次扫码
 
 ## 使用方法
  
@@ -21,15 +22,13 @@
  - 本作品禁止任何形式的倒卖，转载请注明出处。
 
 ## 原理
-在 微信、支付宝、QQ 中扫描到一个网址二维码后，一般会通过内置的浏览器打开这个网址。通过判断内置浏览器的 UA，即可得出当前扫码的具体支付平台。
+在 微信、支付宝扫描到一个网址二维码后，一般会通过内置的浏览器打开这个网址。通过判断内置浏览器的 UA，即可得出当前扫码的具体支付平台。
 
 ````
 if(navigator.userAgent.match(/Alipay/i)) {
     // 支付宝
 } else if(navigator.userAgent.match(/MicroMessenger\//i)) {
     // 微信
-} else if(navigator.userAgent.match(/QQ\//i)) {
-    // QQ
 } else {
     // 其它
 }
@@ -44,8 +43,7 @@ if(navigator.userAgent.match(/Alipay/i)) {
 [更多使用说明请查阅项目wiki](https://github.com/mengkunsoft/OneQRCode/wiki)
 
 在线演示：
-
-http://lab.mkblog.cn/oneqrcode/
+无
 
 # License
 
